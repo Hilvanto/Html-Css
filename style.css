@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item input[type="checkbox"] {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.item label {
+  display: block;
+  width: 400px;
+  padding: 1rem;
+  color: #28282b;
+  cursor: pointer;
+  border-radius: 3px;
+  user-select: none;
+  margin: 0.1rem 0;
+  font-family: "Poppins", sans-serif;
+}
+.item label i {
+  margin-right: 1rem;
+  transition: 0.2s;
+}
+#item1 ~ h4 label,
+#item1 ~ .content {
+  background: #fef9a7;
+}
+#item2 ~ h4 label,
+#item2 ~ .content {
+  background: #b1e1ff;
+}
+#item3 ~ h4,
+#item3 ~ .content {
+  background: #ffdaaf;
+}
+.content {
+  width: 400px;
+  max-height: 0;
+  overflow: hidden;
+  border-radius: 3px;
+  font-family: "Poppins", sans-serif;
+  transition: max-height 0.2s;
+  color: #28282b;
+}
+.content p {
+  padding: 1rem;
+}
+input:checked ~ .content {
+  max-height: 250px;
+}
+input:checked ~ h4 label i {
+  transform: rotate(45deg);
+}
